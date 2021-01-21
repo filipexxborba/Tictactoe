@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -15,6 +16,11 @@ body{
 
 .wrapper{
     padding: 32px;
+    background: #202124;
+    border-radius: 32px;
+    -webkit-box-reflect: below 8px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.3)));
+    box-shadow: 4px 4px 16px rgba(15, 15, 15, 0.2);
+    transition: .3s ease-in all;
 }
 
 .gametable{
@@ -59,6 +65,56 @@ body{
 .winner-positions{
     background: #020202;
     animation: win .3s alternate infinite !important;
+}
+
+.button-reset{
+    margin-top: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 32px;
+    box-shadow: inset 2px 0px 16px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, #435380, #4d5979);
+    transition: all .3s ease-in;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.button-reset:hover{
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.5);
+}
+
+.winner-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #435380, #4d5979);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .3s all ease-in;
+}
+
+.active{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.blur{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
 
 @keyframes win{

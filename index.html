@@ -7,6 +7,9 @@
     <title>Tic Tac Toe | Filipe Borba</title>
 </head>
 <body>
+    <div class="winner-box">
+        <h2 id="text-winner">O vencedor é o player X</h2>
+    </div>
     <div class="wrapper">
         <div class="gametable">
             <div class="row">
@@ -23,6 +26,11 @@
                 <p class="format" id="7" onclick="gameAction(this)"></p>
                 <p class="format" id="8" onclick="gameAction(this)"></p>
                 <p class="format" id="9" onclick="gameAction(this)"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button-reset" onclick="resetGame()">
+                <p>Resetar</p>
             </div>
         </div>
     </div>
